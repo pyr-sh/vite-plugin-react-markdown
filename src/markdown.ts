@@ -124,11 +124,13 @@ export function createMarkdown(options: ResolvedOptions) {
     }
     else { html = ` const markdown = ${html}` }
 
+    console.log('dupa', id)
+
     const compiledReactCode = `
     export default function React__Markdown () {
       ${transformSync(html, {
         ast: false,
-        filename: id,
+        filename: 'xd.js',
         presets: ['@babel/preset-react'],
         plugins: [],
       })!.code}
