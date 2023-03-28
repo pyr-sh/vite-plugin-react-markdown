@@ -130,7 +130,7 @@ export function createMarkdown(options: ResolvedOptions) {
     export default function React__Markdown () {
       ${transformSync(html, {
         ast: false,
-        filename: 'xd.js',
+        filename: 'xd.tsx',
         presets: ['@babel/preset-react'],
         plugins: [],
       })!.code}
